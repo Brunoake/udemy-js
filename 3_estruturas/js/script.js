@@ -176,5 +176,5 @@ switch(job){
         console.log("vc é dev front end")
         break
         default:
-         console.log("voce não é nd")
+      console.log("voce não é nd")
     }
