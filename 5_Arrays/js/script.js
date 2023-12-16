@@ -37,3 +37,32 @@ console.log(txt.toUpperCase())
 console.log(typeof txt.toUpperCase)
 
 console.log(txt.indexOf("g"))
+
+// object literals
+
+const person = {
+    name: "Bruno",
+    age: 31,
+    job: "programador"
+}
+
+console.log(person)
+
+//  novas propriedades
+
+const car = {
+    engine: 2.0,
+    brand: "vw",
+    km: 20000,
+
+};
+
+console.log(car)
+
+car.doors = 4;
+
+console.log(car)
+
+delete car.km
+
+console.log(car)
