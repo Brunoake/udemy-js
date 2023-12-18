@@ -115,41 +115,93 @@
 // const b = a
 
 // console.log(a)
-// console.log(b)
+// // console.log(b)
 
-// console.log(a === b);
+// // console.log(a === b);
 
-// a.age = 18;
+// // a.age = 18;
 
-// console.log(b)
+// // console.log(b)
 
-// loop em arrays
+// // loop em arrays
 
-const users = ["Bruno", "Thiago", "Ana", "Guilherme"]
+// const users = ["Bruno", "Thiago", "Ana", "Guilherme"]
 
-for(let i = 0; i < users.length; i++){
-    console.log(`listando o usuario ${users[i]}`)
-} 
+// for(let i = 0; i < users.length; i++){
+//     console.log(`listando o usuario ${users[i]}`)
+// } 
 
-// push e pop
+// // push e pop
 
-const array = ["a", "b", "c"]
+// const array = ["a", "b", "c"]
 
-array.push("d");
+// array.push("d");
 
-console.log(array);
+// console.log(array);
 
-console.log(array.length);
+// console.log(array.length);
 
-array.pop();
+// array.pop();
 
-console.log(array);
+// console.log(array);
 
-const itemremovido = array.pop()
+// const itemremovido = array.pop()
 
-console.log(itemremovido);
-console.log(array);
+// console.log(itemremovido);
+// console.log(array);
 
-array.push("z","f", "e");
+// array.push("z","f", "e");
 
-console.log(array);
+// console.log(array);
+
+// // shift e unshift
+
+// const letters = ["a", "b", "c"]
+
+// const letter = letters.shift();
+
+// console.log(letter);
+
+// console.log(letters);
+
+// letters.unshift("p", "d", "e");
+
+// letters.unshift("r");
+
+// console.log(letters);
+
+// // indexOf e lastIndexOf
+
+// const mYelements = ["morango", "maçã", "abacate"];
+
+// console.log(mYelements.indexOf("abacate"));
+
+// console.log(mYelements[2]);
+
+// console.log(mYelements[mYelements.indexOf("abacate")])
+
+// console.log(mYelements.lastIndexOf("abacate"));
+
+// console.log(mYelements.indexOf("uva"));
+
+// Slice
+
+const testeslice = ["a", "b", "c", "s"]
+
+const subarray = testeslice.slice(2, 4);
+
+console.log(subarray);
+
+console.log(testeslice);
+
+const subarray2 = testeslice.slice(2, 4 + 1)
+
+console.log(subarray2)
+
+const subarray3 = testeslice.slice(10, 20)
+
+console.log(subarray3)
+
+const subarray4 = testeslice.slice(2)
+
+console.log(subarray4)
