@@ -255,3 +255,43 @@ console.log(trimtest.trim());
 console.log(trimtest.length);
 
 console.log(trimtest.trim().length);
+
+// padstart
+
+const testepadstart = "1"
+
+const newnumber = testepadstart.padStart(4, "0")
+
+console.log(testepadstart);
+
+console.log(newnumber);
+
+const testePadEnd = newnumber.padEnd(10, "0")
+
+console.log(testePadEnd)
+
+const tester = "1"
+
+const testerStart = tester.padStart(6, "1")
+
+console.log(testerStart)
+
+// split
+
+const frase = "O rato roeu a roupa do rei de roma"
+
+const arraydafrase = frase.split(" ")
+
+console.log(arraydafrase)
+
+// join
+
+const frasedenovo = arraydafrase.join(" ")
+
+console.log(frasedenovo)
+
+const itemparacomprar = ["mouse", "teclado", "monitor", "notebook"]
+
+const frasedecompra = `preciamos comprar: ${itemparacomprar.join(", ")}.`
+
+console.log(frasedecompra);
