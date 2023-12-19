@@ -186,22 +186,72 @@
 
 // Slice
 
-const testeslice = ["a", "b", "c", "s"]
+// const testeslice = ["a", "b", "c", "s"]
 
-const subarray = testeslice.slice(2, 4);
+// const subarray = testeslice.slice(2, 4);
 
-console.log(subarray);
+// console.log(subarray);
 
-console.log(testeslice);
+// console.log(testeslice);
 
-const subarray2 = testeslice.slice(2, 4 + 1)
+// const subarray2 = testeslice.slice(2, 4 + 1)
 
-console.log(subarray2)
+// console.log(subarray2)
 
-const subarray3 = testeslice.slice(10, 20)
+// const subarray3 = testeslice.slice(10, 20)
 
-console.log(subarray3)
+// console.log(subarray3)
 
-const subarray4 = testeslice.slice(2)
+// const subarray4 = testeslice.slice(2)
 
-console.log(subarray4)
+// console.log(subarray4)
+
+// // foreach
+
+// const nums = [1, 2, 3, 4, 5, 6]
+
+// nums.forEach((numero) =>{
+//    console.log(`O número é ${numero}`) 
+// });
+
+// const posts = [
+//    {title: "Primeiro post", category: "php"},
+//    {title: "segundo post", category: "js"},
+//    {title: "terceiro post", category: "pyton"},
+// ];
+
+// posts.forEach((post) =>{
+//    console.log(`Exibindo posts ${post.title}, da categoria: ${post.category}`)
+// }) 
+
+// // includes
+
+// const brands= ["bmw", "fiat", "vw"]
+
+// console.log(brands.includes("fiat"))
+
+// if(brands.includes("bmw")) {
+//    console.log("há carros da bmw");
+// }
+
+// reverse
+ 
+const reversetest = [1, 2, 3, 4, 5, 6]
+
+reversetest.reverse();
+
+console.log(reversetest);
+
+// strings: trim
+
+const trimtest = "  testando /n   "
+
+console.log(trimtest);
+
+console.log(trimtest.trim());
+
+
+
+console.log(trimtest.length);
+
+console.log(trimtest.trim().length);
