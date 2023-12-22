@@ -33,4 +33,15 @@ console.log(pessoa.getNome())
 
 pessoa.setNome("macaico")
 
-console.log(pessoa.getNome())
+console.log(pessoa.getNome());
+
+
+// prototype
+
+const text = "asd";
+
+console.log(Object.getPrototypeOf(text));
+
+const bool = true;
+
+console.log(Object.getPrototypeOf(bool));
