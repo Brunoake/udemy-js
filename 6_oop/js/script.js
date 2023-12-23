@@ -90,7 +90,7 @@ function criarCachorro(nome, raca) {
     const cachorro = Object.create({
     })
 
-    cachorro.nome = nome
+    cachorro.nome = nome,
     cachorro.raca =raca
 
     return cachorro
@@ -105,3 +105,20 @@ const jack = criarCachorro("jack", "poodle")
 console.log(jack)
 
 console.log(Object.getPrototypeOf(jack))
+
+const natal = {
+    churrasco: null,
+    convidados: 100
+}
+
+function ceia(comida, pessoas) {
+    const natal = Object.create({})
+    natal.churrasco = comida,
+    natal.convidados = pessoas
+
+    return natal
+};
+
+const ceiadenatal = ceia("kit churrasco", 100)
+
+console.log(ceiadenatal)
