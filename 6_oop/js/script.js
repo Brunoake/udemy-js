@@ -1,124 +1,275 @@
-//  1 - métodos
+// //  1 - métodos
 
-const animal = {
-    nome: "BRUno",
-    latir: function(){
-        console.log("au au")
+// const animal = {
+//     nome: "BRUno",
+//     latir: function(){
+//         console.log("au au")
+//     }
+// };
+
+// console.log(animal.nome);
+
+// animal.latir();
+
+// // aprofundando em objetos
+
+// const pessoa = {
+
+//     nome: "Bruno",
+
+//     getNome: function() {
+
+//         return this.nome;
+//     },
+
+//     setNome: function(novonome) {
+//         this.nome = novonome;
+//     },
+// }
+
+// console.log(pessoa.nome)
+
+// console.log(pessoa.getNome())
+
+// pessoa.setNome("macaico")
+
+// console.log(pessoa.getNome());
+
+
+// // prototype
+
+// const text = "asd";
+
+// console.log(Object.getPrototypeOf(text));
+
+// const bool = true;
+
+// console.log(Object.getPrototypeOf(bool));
+
+// // Mais sobre prototype
+
+// const  myObject = {
+//     a: "b"
+// }
+
+// console.log(Object.getPrototypeOf(myObject));
+
+// console.log(Object.getPrototypeOf(myObject)===Object.prototype)
+
+// const mySecondObject = Object.create(myObject);
+
+// console.log(mySecondObject);
+
+// //  Classes básicas
+
+// const cachorro = {
+//     raca: null,
+//     Patas: 4,
+// }
+
+// const pastorAlemao = Object.create(cachorro);
+
+// pastorAlemao.raca = "pastor Alemão";
+
+// console.log(pastorAlemao);
+
+// console.log(pastorAlemao.patas);
+
+// console.log(pastorAlemao);
+
+// const bulldog = Object.create(cachorro)
+
+// bulldog.raca = "bulldog"
+
+// console.log(bulldog)
+
+// // função construtora
+
+// function criarCachorro(nome, raca) {
+
+//     const cachorro = Object.create({
+//     })
+
+//     cachorro.nome = nome,
+//     cachorro.raca =raca
+
+//     return cachorro
+// }
+
+// const bob = criarCachorro("bob", "vir-lata");
+
+// console.log(bob);
+
+// const jack = criarCachorro("jack", "poodle")
+
+// console.log(jack)
+
+// console.log(Object.getPrototypeOf(jack))
+
+// const natal = {
+//     churrasco: null,
+//     convidados: 100
+// }
+
+// function ceia(comida, pessoas) {
+//     const natal = Object.create({})
+//     natal.churrasco = comida,
+//     natal.convidados = pessoas
+
+//     return natal
+// };
+
+// const ceiadenatal = ceia("kit churrasco", 100)
+
+// console.log(ceiadenatal)
+
+// new
+
+// function Cachorro(nome, raca) {
+
+
+//     this.nome = nome
+//     this.raca = raca
+// }
+
+// const husky = new Cachorro("uzzzy", "husky")
+
+// console.log(husky);
+
+// // metodos na funçao construtora
+
+// Cachorro.prototype.uivar = function() {
+//     console.log("Auuuuuuuu!")
+// }
+
+// console.log(Cachorro.prototype);
+
+// husky.uivar();
+
+// // classes ES6
+
+// class CachorroClasse {
+//     constructor(nome, raca) {
+//         this.nome = nome
+//         this.raca = raca
+//     }
+// }
+
+// const jeff = new CachorroClasse("jeff", "bug");
+
+// console.log(jeff);
+
+// console.log(Object.getPrototypeOf(jeff));
+
+// // mais sobre classes
+
+// class Caminhao {
+//     constructor(eixos, cor) {
+//         this.eixos = eixos;
+//         this.cor = cor
+//     }
+
+//     descreverCaminhao() {
+//         console.log(`Este caminhão tem ${this.eixos} eixos e é da cor ${this.cor}`)
+//     }
+// }
+
+// const scania = new Caminhao(6, "vermelha")
+
+// console.log(scania)
+
+// scania.descreverCaminhao()
+
+// // Override
+
+// class Humano {
+//     constructor(nome, idade){
+//         this.nome = nome; 
+//         this.idade = idade;
+//     }
+// }
+// const bruno = new Humano("Bruno", 19);
+
+// console.log(bruno);
+
+// Humano.prototype.idade = "não defifinda";
+
+// console.log(bruno.idade);
+
+// console.log(Humano.prototype.idade);
+
+// symbol
+
+class Aviao {
+    constructor(marca, turbina){
+        this.marca = marca;
+        this.turbina = turbina;
     }
-};
-
-console.log(animal.nome);
-
-animal.latir();
-
-// aprofundando em objetos
-
-const pessoa = {
-
-    nome: "Bruno",
-
-    getNome: function() {
-
-        return this.nome;
-    },
-
-    setNome: function(novonome) {
-        this.nome = novonome;
-    },
 }
 
-console.log(pessoa.nome)
+const asas = Symbol();
 
-console.log(pessoa.getNome())
+Aviao.prototype[asas] = 2;
 
-pessoa.setNome("macaico")
+const boing = new Aviao ("Boing", 10);
 
-console.log(pessoa.getNome());
+console.log(boing)
 
+console.log(boing[asas])
 
-// prototype
+// getter e setter
 
-const text = "asd";
+class Post {
+    constructor(titulo, descricao, tags) {
+        this.titulo = titulo;
+        this.descricao = descricao;
+        this.tags = tags;
+    }
 
-console.log(Object.getPrototypeOf(text));
+    get exibirtitulo() {
+        return `Voce esta lendo ${this.titulo}`;
+    }
 
-const bool = true;
-
-console.log(Object.getPrototypeOf(bool));
-
-// Mais sobre prototype
-
-const  myObject = {
-    a: "b"
+    set adicionartags(tags) {
+        const tagsarray = tags.split(", ")
+        this.tags = tagsarray
+    }
 }
 
-console.log(Object.getPrototypeOf(myObject));
 
-console.log(Object.getPrototypeOf(myObject)===Object.prototype)
+const myPost = new Post("algum post", "é um post sobre programação");
 
-const mySecondObject = Object.create(myObject);
+console.log(myPost);
 
-console.log(mySecondObject);
+console.log(myPost.exibirtitulo)
 
-//  Classes básicas
+myPost.adicionartags = "Programação, Java script, js"
 
-const cachorro = {
-    raca: null,
-    Patas: 4,
+console.log(myPost)
+
+// Herança
+
+class Mamifero {
+    constructor(patas){
+        this.patas = patas;
+    }
 }
 
-const pastorAlemao = Object.create(cachorro);
-
-pastorAlemao.raca = "pastor Alemão";
-
-console.log(pastorAlemao);
-
-console.log(pastorAlemao.patas);
-
-console.log(pastorAlemao);
-
-const bulldog = Object.create(cachorro)
-
-bulldog.raca = "bulldog"
-
-console.log(bulldog)
-
-// função construtora
-
-function criarCachorro(nome, raca) {
-
-    const cachorro = Object.create({
-    })
-
-    cachorro.nome = nome,
-    cachorro.raca =raca
-
-    return cachorro
+class Lobo extends Mamifero {
+    constructor(patas, nome) {
+        super(patas, patas)
+        this.nome = nome
+    }
 }
 
-const bob = criarCachorro("bob", "vir-lata");
+const shark = new Lobo(4, "shark")
 
-console.log(bob);
+console.log(shark)
 
-const jack = criarCachorro("jack", "poodle")
+// instance of
 
-console.log(jack)
+console.log(shark instanceof Lobo)
 
-console.log(Object.getPrototypeOf(jack))
+console.log(Lobo instanceof Mamifero)
 
-const natal = {
-    churrasco: null,
-    convidados: 100
-}
-
-function ceia(comida, pessoas) {
-    const natal = Object.create({})
-    natal.churrasco = comida,
-    natal.convidados = pessoas
-
-    return natal
-};
-
-const ceiadenatal = ceia("kit churrasco", 100)
-
-console.log(ceiadenatal)
+console.log(new Lobo(4, "teste") instanceof Mamifero)
